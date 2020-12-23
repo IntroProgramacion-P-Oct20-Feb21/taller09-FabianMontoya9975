@@ -18,18 +18,29 @@ public class Ejercicio05 {
      */
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        String[] estudiantes = {"Kimberly", "Hogan", 
+        String[] estudiantes = {"Kimberly", "Hogan",
             "Teresa", "Luis", "Mark", "Jennifer",
             "Alcides"};
         String inicial;
+        String nombre;
+        char letra;
+        String cadena = "";
+
         boolean bandera = true;
-        while(bandera){
-            System.out.println("Ingrese una letra");
+        while (bandera) {
+            System.out.println("Ingrese una letra: ");
             inicial = entrada.nextLine();
-                    
+            inicial = inicial.toUpperCase();
+            for (int i = 0; i < estudiantes.length; i++) {
+                nombre = estudiantes[i];
+                letra = nombre.charAt(0);
+                cadena = String.format("%s", letra);
+                if (inicial.equals(cadena)){
+                    bandera = false;
+                }
+            }
         }
-        
-        
+
     }
 
 }
