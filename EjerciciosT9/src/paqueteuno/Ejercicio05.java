@@ -31,11 +31,18 @@ public class Ejercicio05 {
             System.out.println("Ingrese una letra: ");
             inicial = entrada.nextLine();
             inicial = inicial.toUpperCase();
+            // Se lee una letra tipo cadena
             for (int i = 0; i < estudiantes.length; i++) {
                 nombre = estudiantes[i];
+                // Se extrae nombre por nombre desde el arreglo estudiantes
                 letra = nombre.charAt(0);
+                // Se extrae la iniocial de cada nombre para compararlo con
+                // la valor ingresado por teclado
                 cadena = String.format("%s", letra);
                 if (inicial.equals(cadena)){
+                    // Si la el valor ingresado por teclado coincide con
+                    // la inicial de nombre el bandera se convierte en falso
+                    // para asi terminar el ciclo
                     bandera = false;
                 }
             }
